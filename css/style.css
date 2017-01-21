@@ -13,8 +13,33 @@ body{
 	font-family: 'Slabo 27px', serif;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Lora', serif;
-	color: blackm ;
+	color: black; 
+	animation: myfadeInAnimation 2s;
 }
+	
+@keyframe myfadeInAnimation {
+from {opacity: 0;}
+to {opacity: 1;}
+}
+@-webkit-keyframes myfadeInAnimation {
+from {opacity: 0;}
+to {opacity: 1;}
+}
+
+
+.pt-page-rotateCubeTopOut {
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-animation: rotateCubeTopOut .6s both ease-in;
+	animation: rotateCubeTopOut .6s both ease-in;
+}
+
+@keyframes rotateCubeTopOut {
+	0% {}
+	50% { -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; -webkit-transform: translateY(-50%) translateZ(-200px) rotateX(45deg); transform: translateY(-50%) translateZ(-200px) rotateX(45deg); }
+	100% { opacity: .3; -webkit-transform: translateY(-100%) rotateX(90deg); transform: translateY(-100%) rotateX(90deg); }
+}
+
 
 
 a {text-decoration:none !important; color: white;}
@@ -162,7 +187,6 @@ NAVIGATION
 .btn:hover{ color:white;}
 li .btn:active{color:#b56724;}
 
-
 @media only screen and (min-width: 600px)
 {
 	.navbar .navbar-nav li.dropdown:hover > ul.dropdown-menu{ display:block;}
@@ -201,7 +225,6 @@ HOME PAGE
 ABOUT PAGE STYLINg
 ********************************/
 div.profile{ 
-
 	 position: relative;
 	 padding-bottom:1px;
 }
@@ -210,75 +233,57 @@ div.profile{
 
 	position: relative;
 	font-family: 'Slabo 27px', serif;
-	border:2px solid blue;
 	
 }
 
 .pImg{
-
 	/*margin:20px auto 0 auto;*/
-    background:#000;
+   
     position:relative;
-    display:inline;
-   	float:left;
-    z-index: 42;
-    border:2px solid blue;
-    
 }
 
 
 .pImg img{
-
-	float:left;
 	height:auto;
 }
 
 
 .pMsg {
-
 	position:relative;
 	color:white;
-	font-size:20px;
-	display:inline;
-   	float:left;
 	min-height:188px;
-	border:2px solid blue;
 	text-shadow: 0px 0px 8px rgba(0,0,0,0.15),0px 0px 8px rgba(0,0,0,0.15)/* glow;, 4px 4px 5pxrgba(0,13,29,0.5)/* drop shadow*/;
 }
 
 .pMsg h1 {
-
 	margin:0;
 	padding:0;
-	
-
 }
 	
 .pMsg p {
-
+	
 	margin:0;
 	padding:0;
 	text-align:justify;
-	font-size: 14px;
+	font-size:16px;
 	font-weight:500;
 }
 	
 .Pbut {
-
 	position:relative;
-	/*margin-top:30px;*/
-	margin-left: 20px;
-	border:2px solid red;
 }
 
 .Pbut ul{
-	list-style:none;	
+	list-style:none;
+	padding-top: 7px;
+	
 }
 
 .Pbut ul li{
-
+	
 	display:inline;
 	margin-left:10px;
+	
 }
 
 .Pbut ul li a:hover{
@@ -286,7 +291,7 @@ div.profile{
 }
 
 .Pbut .label{
-
+	
 	font-style:italic;
 	font-family:'Slabo 27px', serif;
 	font-size:1.2em;
@@ -295,154 +300,191 @@ div.profile{
 }
 
 .Pbut .btn-default{
-
 	background-color:black;/*#bf7536*/;
 }
 
 .Pbut .btn-default:active{
-
 	background-color:#bf7536;
 }
 
-.center {
-	position:relative;
-	
-}
-
 .Message{
-
 	background-color: white;
 	position:relative;
 }
 
 
-
 .grpelem{
-
 	margin-top: 1%;
 	font-family: 'Slabo 27px', serif;
 }
 
 .symbol{
-
+	
 	width:60px;
-	margin-left:4em;
-	float:left;
+	position:relative;
+	margin-right:auto; 
+	margin-left:auto;
+	
 }
 
 #coreV{
-
 	margin-bottom: 2%;
 }
 
 .Messg{
-
-	margin-top:1.5%;
-	margin-left:124px;
+	text-align:center;
+	margin-top:10px;
+	position: left;
+	/* margin-left:124px; */
 }
 
 .Messg h3{
-
 	margin:0;
 	margin-bottom: 2px;
 }
 
 .divider{
-
-	height: 3px;
+	height:3px;
 	background-color:#bf7536;
 	position: relative;
+	margin: 20px auto 0 auto;
 }
 
-@media only screen and (max-width: 769px)
+@media only screen and (min-width: 320px)
 {
+	
+	.prof{ margin-top:50px;}
+	
 	.pImg{
+	    margin: 5px auto 5px auto; width:300px;}
+		
+	 .Pbut{ margin-top:50px;}
+	 
+}
 
-        margin: 5px auto 0 auto;
-		width: 220px;
-	    height:220px;
-	}
+@media only screen and (min-width: 576px)
+{
+	
+	.prof{ margin-top:50px;}
+	
+	.Pbut ul{ margin-left: 30%;}
+	.pImg{
+	    margin: 5px auto 0 auto;
+       width:300px;   }
 
 	.pImg img{
 		padding:20px 0 10px 0;
 		height:auto;
 	}
+	
+	 .Pbut{ margin-top:30px;}
 }
     
-
-@media only screen and (min-width: 769px)
+@media only screen and (min-width: 768px)
 {
-
-	div.profile{
-		height:500px;
+	
+	.prof{
+	margin-top:50px;
 	}
+	
+	.pImg{
+	   width:220px;
+	   height:188px;   
+  }
+  
+   .pImg img{ 
+  	margin:30px 0 20px 0;
+	height:auto;
+   }
+   
+   .pMsg{ width:520px;}
+   
+    .Pbut{ margin-top:50px;}
+    
+	.symbol{
+		
+		left:20px;
+		margin:10px auto 0 auto;
+		float:left;
+	}
+	
+	.Messg{
+		
+		text-align:left;
+		margin-left:100px;
+		width:600px;
+	}
+	
+	.divider{
+	width:588px;
+	left:20px;
+	margin: 20px auto 0 auto;
+   }
+}
 
+@media only screen and (min-width: 992px)
+{
+     div.profile{
+		 height:500px;
+	 }
 	
 	.prof{
     z-index: 42;
-    width: 0.01px;
-    left: 96px;
-    margin-top: 30px;
-    position: relative;
+	margin-top:50px;
 		
 	}
 
 	.pImg{
-
-		width:202px;
-		margin-right: -10000px;
-
-	/*margin-left:30px;
-	margin-top:10px;
-    width:300px;
-    height:188px;
-	float:left;
-    background:#000;*/
-
+		margin-top: 50px;
+	  width:200px;
+	  left: 70px;
   }
 
-  .pImg img{
-  	padding:20px 0 10px 0;
+    .pImg img{ 
+  	margin:40px 0 10px 0;
 	height:auto;
-  }
+   }
 
    	.pMsg{
-
-	width: 669px;
-    margin-right: -10000px;
-    left: 300px;
-
-	
+	width:600px;
+    left: 125px;
   }
 
   .Pbut{
-
-		top:55%;
-		margin-left:50%;
+	 margin-top:50px; 
 	}
-
-    .center {
-
-	width:90%;
-	margin: 0 auto;
-	position:relative;
-	z-index: 100;
+	
+	.Pbut ul{
+	margin-left: 50%;
 }
 	
-  .Messg{ width: 854px; text-align: justify;}
+  .Messg{}
 	
-    .divider{
-	width:870px;
-	left:-13px;
-	margin: 20px auto 0 auto;
-   }
+   .divider{
+	width:750px;
+	left:-10px;
+	margin:20px auto 0 auto;
+   } 
+   
+   .symbol{
+		left:90px;
+		margin:20px auto 0 auto;
+		float:left;
+	}
+	
+	.Messg{
+		
+		text-align:left;
+		margin-left:200px;
+		width:600px;
+	}
 
 
 }
 
 
 /************************************
-CONTACT PAGE STYLINg
+CONTACT PAGE STYLING
 ********************************/
 .contact{
 	position:relative;
@@ -505,94 +547,13 @@ CONTACT PAGE STYLINg
 }
 
 /************************************
-ARCHITECTURE PAGE STYLINg
+ARCHITECTURE PAGE STYLING
 ********************************/
-.Aprof{
-
-	position:relative;
-	background-color:white;
-	padding-bottom:1px;
-	z-index: 400;
-}
-
-.topD{ 
-
-	height:3px;
-	background-color:orange;
-}
-
-.Aprof .divid {
-
-	position:relative;
-	border:2px solid blue;
-	margin-top:10px;
-
-}
-
-.divid .aImg{
-
-	position:relative;
-    margin: 5px auto;
-	width: 220px;
-	height:220px;
-	border:2px solid blue;
-	
-
-}
-
-.divid .aImg img{
-	width:100%;
-	height:218px;
-}
-
-.divid .aMsg{
-
-	position:relative;
-	display:inline;
-	border:2px solid blue;
-	
-}
 
 
 
 
-@media only screen and (min-width: 768px)
-{
 
-	.Aprof{
-	height:400px;
-	padding-left:80px;
-}
-
-.topD{ 
-
-	margin-top: 20px;
-	width:960px;
-	background-color:orange;
-}
-	
-
-	.Aprof .divid {
-	width: 0.01px;
-	left:50px;
-}
-
-	.divid .aImg{ 
-    
-    width:300px;
-    margin-right: -10000px;
-    
-
-}
-
- .divid .aMsg{
- 	
- 	width:700px;
-	margin-right: -10000px;
-	left: 242px;
-}
-
-}
 
 
 
