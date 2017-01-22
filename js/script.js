@@ -13,7 +13,9 @@ $(document).ready(function() {
 });
 
 
-
-
-
-
+$(document).readyx(function() {
+	$('button').on('click', function(){
+	    $('button').removeClass('flips');
+	    $(this).addClass('selected');
+	});
+});
