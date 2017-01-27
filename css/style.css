@@ -220,36 +220,28 @@ HOME PAGE
 }
 
 .skyline{height:235px; z-index:1200;}
+/*
+.content{
+			position: absolute;
+  			width: 100vw;
+  			height: 100vh;
+  			overflow: hidden;
+		}
+	.content_body{
+		position: relative;
+		text-align: center;
+		vertical-align: middle;
+		padding: 50% 0;
+		color: white;
+	}
+	.content_body.flip {
+	    transform: scaleX(-1);
+	    -moz-transform: scaleX(-1);
+	    -webkit-transform: scaleX(-1);
+	    -ms-transform: scaleX(-1);
+	}
 
-#container{
-	perspective: 1200px;
-	position: relative;
-	padding: 0;
-	height: 100%
-	width: 100%;
-	color: white;
-}
-
-.flips{
-
-}
-
-.flips.selected{
-	transform: rotateX(45deg);
-}
-
-.row img{
-	width: 100%;
-}
-
-.container-content{
-	text-align: center;
-	padding: 0;
-	position: absolute;
-	margin: -25% 0;
-}
-
-
+*/
 
 
 /************************************

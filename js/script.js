@@ -13,9 +13,13 @@ $(document).ready(function() {
 });
 
 
-$(document).readyx(function() {
-	$('button').on('click', function(){
-	    $('button').removeClass('flips');
-	    $(this).addClass('selected');
-	});
-});
+
+// document.getElementById("myBtn").addEventListener("click", tweenThis);
+
+// function tweenThis(){
+// 	TweenLite.to(".content", 2, {rotationX:-90, scaleX:0.8, z:-300, onComplete:complete});
+
+// 	function complete(){
+// 		window.open ('about.html','_self',false)
+// 	}
+// }
