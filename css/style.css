@@ -221,36 +221,6 @@ HOME PAGE
 
 .skyline{height:235px; z-index:1200;}
 
-#container{
-	perspective: 1200px;
-	position: relative;
-	padding: 0;
-	height: 100%
-	width: 100%;
-	color: white;
-}
-
-.flips{
-
-}
-
-.flips.selected{
-	transform: rotateX(45deg);
-}
-
-.row img{
-	width: 100%;
-}
-
-.container-content{
-	text-align: center;
-	padding: 0;
-	position: absolute;
-	margin: -25% 0;
-}
-
-
-
 
 /************************************
 ABOUT PAGE STYLINg
