@@ -4,8 +4,7 @@ GENERAL
 
 @import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans|Slabo+27px');
 
-body{
-    
+body{  
     position:relative;
 	background-color:black;
 	margin:0;
@@ -13,8 +12,14 @@ body{
 	font-family: 'Slabo 27px', serif;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Lora', serif;
-	color: black; 
-	animation: myfadeInAnimation 2s;
+	font-family: "Helvetica Neue";
+	color: black;
+	/* -webkit-perspective: 1200px; */
+	/* perspective: 1200px; */
+	/* -webkit-transform-origin: 50% 100%; */
+	/* transform-origin: 50% 100%; */
+	/* -webkit-animation: rotateCubeBottomIn 6ss both ease-in; */
+	/* animation: rotateCubeBottomIn 5s both ease-in; */
 }
 	
 @keyframe myfadeInAnimation {
@@ -33,6 +38,39 @@ to {opacity: 1;}
 	-webkit-animation: rotateCubeTopOut .6s both ease-in;
 	animation: rotateCubeTopOut .6s both ease-in;
 }
+
+.pt-page-rotateCubeBottomOut {
+	-webkit-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	-webkit-animation: rotateCubeBottomOut .6s both ease-in;
+	animation: rotateCubeBottomOut .6s both ease-in;
+}
+.pt-page-rotateCubeBottomIn {
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-animation: rotateCubeBottomIn .6s both ease-in;
+	animation: rotateCubeBottomIn .6s both ease-in;
+}
+@-webkit-keyframes rotateCubeBottomOut {
+	0% { }
+	50% { -webkit-animation-timing-function: ease-out; -webkit-transform: translateY(50%) translateZ(-200px) rotateX(-45deg); }
+	100% { opacity: .3; -webkit-transform: translateY(100%) rotateX(-90deg); }
+}
+@keyframes rotateCubeBottomOut {
+	0% { }
+	50% { -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; -webkit-transform: translateY(50%) translateZ(-200px) rotateX(-45deg); transform: translateY(50%) translateZ(-200px) rotateX(-45deg); }
+	100% { opacity: .3; -webkit-transform: translateY(100%) rotateX(-90deg); transform: translateY(100%) rotateX(-90deg); }
+}
+
+@-webkit-keyframes rotateCubeBottomIn {
+	0% { opacity: .3; -webkit-transform: translateY(-100%) rotateX(90deg); }
+	50% { -webkit-animation-timing-function: ease-out; -webkit-transform: translateY(-50%) translateZ(-200px) rotateX(90deg); }
+}
+@keyframes rotateCubeBottomIn {
+	0% { opacity: .3; -webkit-transform: translateY(-100%) rotateX(90deg); transform: translateY(-100%) rotateX(90deg); }
+	50% { -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; -webkit-transform: translateY(-50%) translateZ(-200px) rotateX(90deg); transform: translateY(-50%) translateZ(-200px) rotateX(45deg); }
+}
+
 
 @keyframes rotateCubeTopOut {
 	0% {}
@@ -147,10 +185,11 @@ NAVIGATION
 	background-color: transparent !important;
 }
 .navbar .navbar-nav>li>a {
-	    font-family: 'Open Sans', sans-serif;
+	    font-family:"Helvetica Neue", sans-serif;
+		/* 'Open Sans', sans-serif; */
 	    font-size:1em;
 	    color:white;
-		font-weight:600;
+		font-weight:500;
 	/* color:#ee3456; */
 }
 
@@ -163,9 +202,8 @@ NAVIGATION
 
 /* //sub-menu */
 .navbar .navbar-nav>.open>a{ background: transparent !important; color:white;}
-
-.navbar-default .navbar-nav>.open>a:focus{ color: white;}
-.dropdown-menu>li>a{ font-family: 'Open Sans', sans-serif; color:white;}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus{color:white;}
+.dropdown-menu>li>a{ font-family: "Helvetica Neue", sans-serif; color:white;}
 .navbar-collapse { background-color: black;}
 .dropdown-menu>li>a:hover { background-color: #b56724;} 
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus { background-color: #b56724;} 
@@ -187,10 +225,29 @@ NAVIGATION
 .btn:hover{ color:white;}
 li .btn:active{color:#b56724;}
 
-@media only screen and (min-width: 600px)
+
+
+/* use hover to display subment on screen size larger than this */
+@media only screen and (min-width: 768px)
 {
 	.navbar .navbar-nav li.dropdown:hover > ul.dropdown-menu{ display:block;}
+	/* hide caret class*/
+ .caret{
+	display:none;
 }
+}
+
+@media  only screen and (max-width: 767px)
+{
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: white;
+}
+
+ul.dropdown-menu>li>a:hover { background-color: #b56724;} 
+
+}
+
+
 
 /****************************************
 HOME PAGE 
@@ -198,7 +255,7 @@ HOME PAGE
 /* for carousel */
 .carousel .item img{ height:500px; width:100%; z-index:1200;}
 .carousel-control.right, .carousel-control.left{ background-color:none; opacity:0.5; width:5%;}
-.Man{ background-color:white; text-align:center; font-family: 'Slabo 27px', serif;}
+.Man{ background-color:white; text-align:center; font-family: 'Slabo 27px', serif; position:relative;}
 .Man img{ width:85%;}
 .Man h3{font-size: 22px; font-weight: normal;}
 .Man p{font-size: 14px; padding-left: 15px; padding-right: 15px;}
@@ -215,11 +272,25 @@ HOME PAGE
     box-shadow: 0 0 0 10px white;
     margin-top: -10px;
     animation-name:ring;
-    animation-duration: 4s;
+    animation-duration: 2.5s;
     animation-iteration-count: infinite;
 }
 
+.ManMsg{
+	position:relative;
+}
+
 .skyline{height:235px; z-index:1200;}
+
+
+@media only screen and (max-width: 520px)
+{
+	
+	.Man img{height:80px;}
+	.ManMsg{top: 10px; padding: 2px;}
+	.ManMsg:last-child{ margin-bottom: 10px;}
+}
+
 
 /************************************
 ABOUT PAGE STYLINg
@@ -230,68 +301,34 @@ div.profile{
 }
 
 .prof{
-
 	position: relative;
-	font-family: 'Slabo 27px', serif;
-	
+	font-family: 'Lora', serif;
 }
 
 .pImg{
 	/*margin:20px auto 0 auto;*/
-   
     position:relative;
 }
 
 
-.pImg img{
-	height:auto;
-}
+.pImg img{ height:auto;}
 
 
-.pMsg {
-	position:relative;
-	color:white;
-	min-height:188px;
-	text-shadow: 0px 0px 8px rgba(0,0,0,0.15),0px 0px 8px rgba(0,0,0,0.15)/* glow;, 4px 4px 5pxrgba(0,13,29,0.5)/* drop shadow*/;
-}
+.pMsg{position:relative; color:white; min-height:188px; text-shadow: 0px 0px 8px rgba(0,0,0,0.15),0px 0px 8px rgba(0,0,0,0.15);}
 
-.pMsg h1 {
-	margin:0;
-	padding:0;
-}
+.pMsg h1{ margin:0; padding:0;}
 	
-.pMsg p {
+.pMsg p { margin:0; padding:0; text-align:justify; font-size:14px;font-weight:500;}
 	
-	margin:0;
-	padding:0;
-	text-align:justify;
-	font-size:16px;
-	font-weight:500;
-}
-	
-.Pbut {
-	position:relative;
-}
+.Pbut {position:relative;}
 
-.Pbut ul{
-	list-style:none;
-	padding-top: 7px;
-	
-}
+.Pbut ul{ list-style:none; padding-top: 7px;}
 
-.Pbut ul li{
-	
-	display:inline;
-	margin-left:10px;
-	
-}
+.Pbut ul li{ display:inline; margin-left:10px;}
 
-.Pbut ul li a:hover{
-	 opacity: 0.9;
-}
+.Pbut ul li a:hover{ opacity: 0.9;}
 
 .Pbut .label{
-	
 	font-style:italic;
 	font-family:'Slabo 27px', serif;
 	font-size:1.2em;
@@ -356,7 +393,7 @@ div.profile{
 	.prof{ margin-top:50px;}
 	
 	.pImg{
-	    margin: 5px auto 5px auto; width:300px;}
+	    margin: 5px auto 0 auto; width:300px;}
 		
 	 .Pbut{ margin-top:50px;}
 	 
@@ -402,14 +439,12 @@ div.profile{
     .Pbut{ margin-top:50px;}
     
 	.symbol{
-		
 		left:20px;
 		margin:10px auto 0 auto;
 		float:left;
 	}
 	
 	.Messg{
-		
 		text-align:left;
 		margin-left:100px;
 		width:600px;
@@ -435,7 +470,7 @@ div.profile{
 	}
 
 	.pImg{
-		margin-top: 50px;
+	  margin-top: 50px;
 	  width:200px;
 	  left: 70px;
   }
@@ -455,7 +490,7 @@ div.profile{
 	}
 	
 	.Pbut ul{
-	margin-left: 50%;
+	margin-left:25%;
 }
 	
   .Messg{}
@@ -549,11 +584,134 @@ CONTACT PAGE STYLING
 /************************************
 ARCHITECTURE PAGE STYLING
 ********************************/
+.aImg{
+	width:300px;
+	margin-top: 20px;
+}
+
+.aProf{
+	
+}
+
+.gallery{
+	position:relative;
+	margin:10px auto;
+	width: 270px;
+	max-width:900px;
+}
+
+a.prev{
+	position:absolute;
+	display:block;
+	left:-30px;
+	top:45%;
+}
+
+a.next{
+	position:absolute;
+	display:block;
+	right: -30px;
+	top:45%;
+}
+
+.archCarous{
+	position:relative;
+	overflow:hidden;
+	z-index:2;
+	box-sizing: content-box;
+	margin:5px auto;
+   
+}
+
+.archCarous ul{
+	list-style:none; 
+	position:relative; 
+	width: 20000em;
+	z-index:1; 
+	margin:0;
+	padding:0;
+}
+
+.archCarous ul li{
+	float:left;
+	width:260px;
+	margin:0 5px 0 0;
+	border: 2px solid #bababa;
+}
+
+.archCarous ul li img {
+        width:100%;
+        height:auto;
+    }
+	
+.gallery .glyphicon{
+	color:black;
+	font-size:20px;
+}
+@keyframes gline{
+	0%{ background-color: #bf7536 }
+	50%{background-color: blue}
+	100%{background-color: red}
+}
+
+.gline{
+	background-color:#b56724; 
+	height:3px; 
+	margin:0 auto 10px auto; 
+	max-width:850px;
+	animation:gline 3s both ease-out;
+	-webkit-animation:gline 3s both ease-out;
+    animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 850px)
+{
+	
+   .gline{
+	   width: 520px;
+   }
+}
+	
+@media only screen and (max-width: 560px)
+{
+	
+   .gline{
+	   width: 280px;
+   }
+}
 
 
+	
+	
+@media only screen and (min-width: 560px)
+{
+	.gallery{
+	width: 520px;
+}
 
+  .archCarous ul li{
+	float:left;
+	width:259px;
+ }
+ 
+}
 
+@media only screen and (min-width: 900px)
+{
+	.gallery{
+	width: 820px;
+}
 
+  .archCarous ul li{
+	float:left;
+	width:270px;
+ }
+ 
+ .gallery .glyphicon{
+	font-size:24px;
+}
+ 
+}
 
 
 
@@ -590,7 +748,7 @@ footer li a{
 footer li .btn{
 	background-color:transparent;
 	/* 'Open Sans', sans-serif; */
-	font-family: 'Lora', serif; 
+	font-family:"Helvetica Neue", serif; 
 	font-size:0.8em;
 	letter-spacing:1px;
 	border:2px solid white;
@@ -603,8 +761,7 @@ footer li a:hover, footer li .btn:hover{
 footer span{ color: white; letter-spacing: ; font-family: 'Lora', serif; font-size:0.8em;}
 
 .bmenu{
-	margin-top: 14px;
-	border:2px solid white;
+	position:relative;
 	text-align:right;
 }
 
@@ -613,6 +770,7 @@ footer span{ color: white; letter-spacing: ; font-family: 'Lora', serif; font-si
 }
 
 .bmenu img{
+	margin-top:10px;
 	margin-left:7px;
 }
 
@@ -622,7 +780,7 @@ footer span{ color: white; letter-spacing: ; font-family: 'Lora', serif; font-si
 	footer ul{padding:0;}
 	footer ul li{display:block; margin:0; font-weight:400px;}
 	footer li a{padding:0;}
-	.bmenu{margin-top:9%;}
+	.bmenu{text-align:left; margin-top:10%;}
 	
 }
 	
