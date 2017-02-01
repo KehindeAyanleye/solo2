@@ -9,6 +9,7 @@ $(document).ready(function() {
 	function redirectPage() {
 		window.location = linkLocation;
 	}
+<<<<<<< HEAD
 
 });
 
@@ -37,3 +38,7 @@ $('.gallery-item').magnificPopup({
 
 
 
+=======
+	
+});
+>>>>>>> 64bc0ab6ae6072f0214587e49b516a2469a4ebf2
