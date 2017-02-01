@@ -12,7 +12,14 @@
 			<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 			<link rel="stylesheet" href="css/style.css" type="text/css">
 			<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css">
-	       
+	        <!-- start of favicons -->
+		     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+ 		     <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+ 		     <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+ 		     <link rel="manifest" href="favicons/manifest.json">
+		    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#000000">
+ 			<meta name="theme-color" content="#000000">
+			
 			
 			 <title> WhiteBricks Company &#8211; creating affordable Homes </title>
 	</head>
@@ -24,11 +31,11 @@
 						 <div class="social-icons">
 						 <!-- @nav-pills to place elements inline  -->
 							<ul class="nav nav-pills">
+								 <li> <a href="https://www.instagram.com/iamrenike/" target="_blank"> <i class="fa fa-google-plus-square"> </i> </a> </li>
 								<li> <a href="https://www.facebook.com/morenike.w.olusanya?fref=ts" target="_blank"> <i class="fa fa-facebook-square"> </i> </a> </li>
-								<li> <a href="https://ng.linkedin.com/in/morenike-olusanya-873b15107" target="_blank"> <i class="fa fa-linkedin-square"> </i> </a> </li>
 								<li> <a href="https://twitter.com/rennybonna" target="_blank"> <i class="fa fa-twitter-square"> </i> </a> </li>
-								<li> <a href="https://www.instagram.com/iamrenike/" target="_blank"> <i class="fa fa-instagram"> </i> </a> </li>
-								<li> <a href="https://www.instagram.com/iamrenike/" target="_blank"> <i class="fa fa-google-plus-square"> </i> </a> </li>
+								<li> <a href="https://ng.linkedin.com/in/morenike-olusanya-873b15107" target="_blank"> <i class="fa fa-linkedin-square"> </i> </a> </li>
+								<li> <a href="https://www.instagram.com/_whitebricks_/" target="_blank"> <i class="fa fa-instagram"> </i> </a> </li>
 							</ul>
 						 </div>
 				</div> <!-- end of row -->
@@ -37,7 +44,7 @@
 				  <div class="container-fluid">
 						<!-- board and toggle get grouped for better mobile display -->
 				   <div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#wbMenu" aria-expanded="false">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="modal" data-target="#modalNav" aria-expanded="false">
 						<span class="glyphicon glyphicon-option-horizontal">  </span>
 						<span class="glyphicon glyphicon-option-horizontal">  </span>
 						<span class="glyphicon glyphicon-option-horizontal">  </span>
@@ -47,34 +54,79 @@
 				 </div> <!--nav-header -->
 				 <div class="collapse navbar-collapse" id="wbMenu" role="banner"> 
 					 <ul class="nav navbar-nav navbar-right">
-						 <li > <a href="index.html"> HOME <span class="sr-only"> </span></a> </li>
+						 <li > <a href="home.html"> HOME <span class="sr-only"> </span></a> </li>
 						 <li class="active"> <a href="about.html"> ABOUT US </a> </li>	 
-						 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> DESIGN </a> 
+						 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> SERVICES </a> 
 							<ul class="dropdown-menu"> 
-							   <li> <a href="architecture.html"> ARCHITECTURE  </a> </li>
-							   <li> <a href="#"> INTERIOR </a> </li>  
+							   <li> <a href="architecture.html"> ARCHITECTURE DESIGN  </a> </li>
+							   <li> <a href="interior.html"> INTERIOR DESIGN </a> </li>  
+							   <li> <a href="#"> AVR </a> </li>  
+							   <li> <a href="#"> HOLOGRAPHIC DESIGN </a> </li>  
+							   <li> <a href="#"> DRONE IMAGING/SURVEYING</a> </li>  
+							   <li> <a href="#"> DEVELOPMENT </a> </li>  
+							   <li> <a href="#"> RENOVATION </a> </li>  
+							   <li> <a href="#"> MANAGEMENT </a> </li>
 							</ul>
 						 </li>
 						 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> PROJECTS </a> 
 							  <ul class="dropdown-menu"> 
-							   <li> <a href="#"> WHITEBRICKS </a> </li>
-							   <li> <a href="#"> PROPERTIES ON LISTING  </a> </li> 
+							   <li> <a href="whitebricks.html"> WHITEBRICKS </a> </li>
+							   <li> <a href="#"> PROPERTY LISTINGS  </a> </li> 
+							   <li> <a href="#"> JOINT VENTURE </a> </li> 
 							</ul>
 						 </li>
 						<a href="contact.html"> <button type="button" class="btn navbar-btn active"> CONTACT </button>  </a> 
 					 </ul>
 					 
-				  </div>  <!-- collapsible menu -->
-				    
+				  </div>  <!-- collapsible menu --> 
 				</div>
+		  </div> <!-- end of navigation --> 
+		  
+		  <!-- modal navigation -->
+		  	  <div id="modalNav" class="modal fade" role="dialog"> 
+		    <div class="modal-dialog">
+			<div class="modal-content">
+			   <div class="modal-body"> 
+			       <div class="modN">
+				      <div>  <a href="home.html"> HOME </a> </div>
+					  <div> <a href="about.html"> ABOUT US </a>  </div>
+					  <div> <a href="#" data-toggle="collapse" data-target="#mNav">  SERVICES <span class="caret"> </span> </a>
+					     <ul id="mNav" class="collapse">
+						     <li> <a href="architecture.html"> ARCHITECTURE </a> </li>
+							 <li> <a href="interior.html"> INTERIOR DESIGN </a> </li>  
+							   <li> <a href="#"> AVR </a> </li>  
+							   <li> <a href="#"> HOLOGRAPHIC DESIGN </a> </li>  
+							   <li> <a href="#"> DRONE IMAGING/SURVEYING</a> </li>  
+							   <li> <a href="#"> DEVELOPMENT </a> </li>  
+							   <li> <a href="#"> RENOVATION </a> </li>  
+							   <li> <a href="#"> MANAGEMENT </a> </li>
+						   </ul>  <!-- end of inner sub menu -->
+					  </div> <!-- end of sub menu -->
+				     <div> <a href="#" data-toggle="collapse" data-target="#mNav2">  PROJECTS <span class="caret"> </span> </a>
+					   <ul id="mNav2" class="collapse">
+						     <li> <a href="whitebricks.html"> WHITEBRICKS </a> </li>
+							 <li> <a href="#"> PROPERTY LISTINGS  </a> </li>  
+							  <li> <a href="#"> JOINT VENTURES  </a> </li>  
+					 </ul>
+				   </div>
+				   <div>  <a href="contact.html"> <button type="button" class="btn"> CONTACT </button> </a> </div>
+			   </div>   <!-- end of modal body  -->
+			   
+			   <div class="modal-footer">
+			        <div data-dismiss="modal"> <img src="close.png"> </div> 
+			   </div>
+			</div> 
+			</div>
 		  </div>
+		  </div>
+		  <!-- end of modal navigation -->
 	    </header>
 		
 		<div class="container-fluid">
 		    <div class="row contact">
 			
 				   <h2 class="text-center" style="color:black;"> CONTACT US </h2>
-				   <p class="pInfo"> For any enquires, suggestions and information please do not hesistate to contact us </p>
+				   <p class="pInfo" > For any enquires, suggestions and information please do not hesistate to contact us </p>
 				   
 				   <div class="col-lg-3">
 				   <h3 class="text-center" style="margin:0"> CONTACT INFORMATION </h3>
@@ -92,7 +144,8 @@
 					</div>
 				   </div>
 				   <div class="col-lg-9"> 
-				   <form class="form-horizontal">
+				   <!-- start of form --> 
+				   <form class="form-horizontal" action="contact.php" method="POST">
 				  <div class="form-group">
 					<label class="control-label col-sm-2" for="name">Name:</label>
 					<div class="col-sm-10">
@@ -123,7 +176,7 @@
 			<button type="submit" class="btn btn-default"> SUBMIT </button>
 			</div>
 			</div>
-				   </form>
+				   </form> <!-- end of form --> 
 				   </div> <!-- end of column  -->   
 			</div>
 			  <div class="row Map" style="height:320px;"> 
@@ -141,20 +194,23 @@
 		    <div class="container-fluid">
 			<div class="row"> 
 				 <ul class="col-lg-9 col-xs-6 menu"> 
-				    <li> <a href="index.html"> HOME </a></li>
+				    <li> <a href="home.html"> HOME </a></li>
 					<li> <a href="about.html"> ABOUT US </a></li>
-					<li> <a href="#"> DESIGN </a></li>
+					<li> <a href="#"> SERVICES </a></li>
 					<li> <a href="#"> PROJECTS </a></li>
 					<li class="active"> <a href="contact.html"> <button type="button" class="btn"> CONTACT </button>  </a> </li>
 				 </ul>
-				 <div class="col-lg-3 col-xs-6 bmenu">  <span> &copy;2017 WHITEBRICKS </span> <img src="Logo.png" height="45px"> </div>	
+				 <div class="col-lg-3 col-md-3 col-xs-7 bmenu">
+				 <div class="bmenuM"> &copy;2017 WHITEBRICKS </div>  
+				 <div> <img src="Logo.png" height="45px"> </div>
+				</div>
 			  </div> 
 			</div>
 		</footer>
 		
 		
 		  <script src="js/jquery-3.1.1.min.js" type="text/javascript"> </script>
-	      <script src="js/bootstrap.js" type="text/javascript"> </script>
+	      <script src="js/bootstrap.min.js" type="text/javascript"> </script>
 	      <script src="js/script.js" type="text/javascript"> </script>
 	</body>
 	</html>

@@ -75,7 +75,8 @@
 			right:20px;	
 		    text-align:center;
 			font-family: 'Lora', serif;
-			
+			-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 		  }
 		  
 		  .front{
@@ -88,6 +89,8 @@
 	       backface-visibility:hidden;
 		    -webkit-transform-origin: 50% 0%;
 			transform-origin: 50% 0%;
+			 
+			
 		  }
 		  
 		  
@@ -118,8 +121,8 @@
 			left:60px;
 			right:60px;
 			margin:0 auto;
+			
 		 }
-		
 		 
 		 #social-icon ul{
 			 text-align:center;
@@ -129,9 +132,14 @@
 		 #social-icon ul li{
 		   display:inline;
 		   margin:0 6px;
-		 } 
-		 #social-icon ul li a{font-size:1.5em; }
-		 #social-icon ul li a:hover{color:#b56724;}
+		 }
+		 
+		 #social-icon ul li a{
+		    font-size:1.5em;
+		 }
+		 
+		 
+		 
 
 		  @media only screen and (max-width: 770px){
 		      body{
@@ -147,7 +155,46 @@
 		  
 		  }
 		  
+		  
+		  
+		  
+		      
+			  
 		 
+		 
+		 
+		  
+		  .rotate-Flip{
+		      transform-style: preserve-3d;
+			 -webkit-transform-origin: 50% 100%;
+	         transform-origin: 50% 100%;
+	        -webkit-animation: RotateFlip .6s both ease-in;
+	        animation: RotateFlip .6s both ease-in;
+		  }
+		  
+		  .rotateCubeTopOut {
+	     -webkit-transform-origin: 50% 100%;
+	    transform-origin: 50% 100%;
+	    -webkit-animation: rotateCubeTopOut .6s both ease-in;
+	     animation: rotateCubeTopOut .6s both ease-in;
+}
+	   
+
+
+@keyframes rotateCubeTopOut {
+	0% {}
+	50% { -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; -webkit-transform: translateY(-50%) translateZ(-200px) rotateX(45deg); transform: translateY(-50%) translateZ(-200px) rotateX(45deg); }
+	100% { opacity: .3; -webkit-transform: translateY(-100%) rotateX(90deg); transform: translateY(-100%) rotateX(90deg); }
+}
+	   
+@keyframe RotateFlip{
+
+      0%{}
+	  16% {-webkit-transform:rotateY(-90deg); transform:rotateY(-90deg)}
+	  33% {-webkit-transform:rotateY(-90deg) rotateZ(90deg); transform:rotateY(-90deg) rotateZ(90deg)}
+	  50% {-webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; -webkit-transform: translateY(50%) translateZ(-200px) rotateX(-45deg); transform: translateY(50%) translateZ(-200px) rotateX(-45deg);}
+	  100% {opacity: .3; -webkit-transform: translateY(100%) rotateX(-90deg); transform: translateY(100%) rotateX(-90deg);}
+}
 	     
 	   
 	   
@@ -156,7 +203,7 @@
 	   
 	   
 	   <body>
-	        <div> <img src="bgImg.jpg" class="front" id="backImage"> </div>
+	       <div> <img src="bgImg.jpg" class="front" id="backImage"> </div>
 			
 	       <div class="container front" id="home">
 		   <div class="row" id="content"> 
@@ -176,6 +223,8 @@
 			</div>
 		 </div>
 		 
+		
+		 
 	   
 	   
 	      
@@ -189,6 +238,7 @@
 	function tweenThis(){
 		autoCSS:false
 		var tl  = new TimelineLite({onComplete:complete});
+		
 		 tl.to(".front",1, {yPercent:50,z:-200,rotationX:-45,ease:Power3.easeOut})
 					 .to(".front",1, {opacity:0.3,yPercent:100,rotationX:-90})
 		<!-- tl.to(".front", 1,{opacity:0.3,rotationX:90, yPercent:-100}) -->
@@ -198,7 +248,7 @@
 	
 		
 		function complete(){
-			window.open ('home.html','_self',false)
+			window.open ('index.html','_self',false)
 		}
 	
 	

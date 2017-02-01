@@ -9,8 +9,28 @@ $(document).ready(function() {
 	function redirectPage() {
 		window.location = linkLocation;
 	}
-	
+
 });
+
+$(document).ready(function() {
+
+$('.gallery-item').magnificPopup({
+  type: 'image',
+  gallery:{
+    enabled:true
+  }
+});
+
+});
+
+
+  
+	  
+    
+    
+  
+
+
 
 
 
