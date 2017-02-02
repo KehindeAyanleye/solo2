@@ -810,19 +810,18 @@ a.next{
 /************************************
 FOOTER STYLING
 ********************************/
-footer{
-	margin:0;
-	padding:0;
-	/* background-color:grey; */
-	background-color:rgba(0,0,0,0.4);
-}
 
-footer  ul{
+footer ul{
 	display:block;
 	margin-top:10px; 
 }
 
-footer  ul li{
+footer ul{
+	display:block;
+	margin-top:10px; 
+}
+
+footer ul li{
 	display: inline;
 	margin-top:10px;
 	margin-left:25px;
@@ -848,33 +847,150 @@ footer li a:hover, footer li .btn:hover{
 	color:#ff7814;
 }
 
-footer span{ color: white; letter-spacing: ; font-family: 'Lora', serif; font-size:0.8em;}
+footer .footer--signature{
+	margin-top: 10px;
+	text-align: right;
 
-.bmenu{
-	position:relative;
+}
+
+footer p{
+	font-size:11px;
+	float:left;
+	margin-top: 5%;
+	margin-left: 5px;
+}
+
+footer img{
+	width: 33%;
+	margin-right: 25px;
+}
+
+footer{
 	padding:0;
+	background-color:rgba(0,0,0,0.4);
+	color: white;
 }
 
-.bmenuM{
-	font-size:11px; color:white; float:left; margin:35px 1px 0 0;}
+/*iPad Pro*/
+@media only screen and (max-width: 1024px)
+{
+	footer ul li{
+		margin:0;
+		display: block;
+	}
 
-.bmenu img{
-	margin-top:10px;
+	.btn--contact{
+		margin-top: 7px;
+	}
+
+	footer .footer--signature{
+		margin-top: 10px;
+	}
+
+	footer p{
+		font-size:15px;
+	}
+
+	footer img{
+		width: 35%;
+		margin: 0;
+	}
+
+	footer{
+		margin:10px;
+	}
+
 }
 
+/*iPad*/
 @media only screen and (max-width: 768px)
 {
-	footer{height:70px;}
-	footer ul{padding:0;}
-	footer ul li{display:block; margin:0; font-weight:400px;}
-	footer li a{padding:0;}
-	.bmenu{margin-top:5%;}	
+	footer .footer--signature{
+		margin-top: 98px;
+	}
+
+	footer p{
+		font-size:15px;
+		margin-top: 6.5%;
+		margin-left: 0;
+	}
+
+	footer img{
+		width: 30%;
+	}
+
+	footer{
+		margin:10px;
+	}
 }
-	
-	
 
 
+/*iPhone 6 Plus, Nexus 6P, Nexux 5X*/
+@media only screen and (max-width: 414px) 
+{
+	footer .footer--signature{
+		margin-top: 98px;
+	}
+
+	footer p{
+		font-size:11px;
+		margin-top: 8%;
+		margin-left: 30px;
+	}
+
+	footer img{
+		width: 38%;
+	}
+}
 
 
+/*iPhone 6, Galaxy S5*/
+@media only screen and (max-width: 375px) 
+{
+	footer .footer--signature{
+		margin-top: 98px;
+	}
 
+	footer p{
+		font-size:10px;
+		margin-top: 6%;
+		margin-left: 20px;
+	}
+
+	footer img{
+		width: 34%;
+	}
+
+}
+
+
+/*iPhone 5*/
+@media only screen and (max-width: 320px) 
+{
+	footer ul li{
+		margin:0;
+		display: block;
+
+	}
+
+	.btn--contact{
+		margin-top: 7px;
+	}	
+
+	footer .footer--signature{
+		margin-top: 98px;
+	}
+
+	footer p{
+		font-size:9px;
+		margin-top: 5%;
+		margin-left: 15px;
+	}
+
+	footer img{
+		width: 33%;
+		margin:0;
+	}
+
+}
 
