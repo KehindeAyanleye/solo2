@@ -1,8 +1,5 @@
 <?php
-<<<<<<< HEAD
-=======
 
->>>>>>> 64bc0ab6ae6072f0214587e49b516a2469a4ebf2
 if(isset($_POST['submit']))
 {
   $date = date('d-m-Y');
@@ -11,22 +8,7 @@ if(isset($_POST['submit']))
   $email = $_POST['email'];
   $message = $_POST['message'];
   
-  $send = "Name: " . $name . "\n\n";
-<<<<<<< HEAD
-  $send += "Telephone: " . $mobile . "\n\n";
-  $send += "Email: " . $email . "\n\n";
-  $send += "Message: " . $message . "\n\n";
-  $send += "Date: " . $date . "\n\n";
-  
-  $subject = "Enquiry";
-  $to = 'info@whitebricks.com';
-  if(mail($to, $subject, $send))
-  {
-    header('Location: index.html');
-  }
-}
-?>
-=======
+  $send .= "Name: " . $name . "\n\n";
   $send .= "Telephone: " . $mobile . "\n\n";
   $send .= "Email: " . $email . "\n\n";
   $send .= "Message: " . $message . "\n\n";
@@ -43,4 +25,3 @@ if(isset($_POST['submit']))
 }
 
 ?>
->>>>>>> 64bc0ab6ae6072f0214587e49b516a2469a4ebf2
